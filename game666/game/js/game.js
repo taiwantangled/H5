@@ -745,7 +745,7 @@ game.State.play = {
      */
     actionGetTwig: function (cb) {
         canInvincible = true;
-        var tintTween = game.add.tween(this.player).to({tint: 0xffff00}, 100, Phaser.Easing.Cubic.Out, true, 50, 4, true);
+        var tintTween = game.add.tween(this.player).to({tint: 0x0000ff}, 100, Phaser.Easing.Cubic.Out, true, 50, 4, true);
         tintTween.onComplete.addOnce(() => {
             this.player.tint = 0xffffff;
         });
@@ -846,7 +846,7 @@ game.State.play = {
             this.levelUpSFX.play();
         } catch (e) {
         }
-        var tintTween = game.add.tween(this.player).to({tint: 0xffff00}, 100, Phaser.Easing.Cubic.Out, true, 0, 0, true);
+        var tintTween = game.add.tween(this.player).to({tint: 0xffbb00}, 100, Phaser.Easing.Cubic.Out, true, 0, 0, true);
         tintTween.repeat(8, 50).onComplete.addOnce(() => {
             this.player.tint = 0xffffff;
             canInvincible = false;
